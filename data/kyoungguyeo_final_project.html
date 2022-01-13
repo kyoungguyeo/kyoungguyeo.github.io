@@ -9,11 +9,11 @@
 
 
 <style type="text/css">
-    pre { line-height: 125%; margin: 0; }
-td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
-span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
-td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: var(--jp-cell-editor-active-background) }
 .highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
 .highlight .c { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment */
@@ -14197,7 +14197,23 @@ a.anchor-link {
 .highlight  {
     margin: 0.4em;
 }
+
+/* Input area styling */
+.jp-InputArea {
+    overflow: hidden;
+}
+
+.jp-InputArea-editor {
+    overflow: hidden;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+}
 </style>
+
 
 
 <!-- Load mathjax -->
@@ -15164,7 +15180,7 @@ memory usage: 27.3+ KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>As a first visualization, from <code>gross_cleaned</code> table, let's look at the average gross revenue in each year. Because <strong>inflation_adjusted_gross</strong> is such as an <a href="https://www.quora.com/What-does-it-mean-in-practical-terms-when-a-movies-gross-box-office-is-adjust-for-inflation">imaginary revenue</a> estimate, we will use <strong>total_gross</strong>. I will import the custom script I created with a custion function that returns a dataframe that has been grouped by the column I choose and aggregate the function with them.</p>
+<p>As a first visualization, from <code>gross_cleaned</code> table, let's look at the average gross revenue in each year. Because <strong>inflation_adjusted_gross</strong> is such as an <a href="https://www.quora.com/What-does-it-mean-in-practical-terms-when-a-movies-gross-box-office-is-adjust-for-inflation">imaginary revenue</a> estimate, we will use <strong>total_gross</strong>. I will import the custom script I created with a custom function that returns a dataframe that has been grouped by the column I choose and aggregate the function with them.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15306,12 +15322,12 @@ memory usage: 27.3+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-0a4016ac91bb4b838a3ef78b424f95fd"></div>
+<div id="altair-viz-afc83f9506a54d89a1d0a189eb76b77a"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0a4016ac91bb4b838a3ef78b424f95fd") {
-      outputDiv = document.getElementById("altair-viz-0a4016ac91bb4b838a3ef78b424f95fd");
+    if (outputDiv.id !== "altair-viz-afc83f9506a54d89a1d0a189eb76b77a") {
+      outputDiv = document.getElementById("altair-viz-afc83f9506a54d89a1d0a189eb76b77a");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15667,12 +15683,12 @@ memory usage: 27.3+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-4f6fa176d3544265b7651111f8f6cc83"></div>
+<div id="altair-viz-899b830f6d6f4fc590bc9bd8a51164c4"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-4f6fa176d3544265b7651111f8f6cc83") {
-      outputDiv = document.getElementById("altair-viz-4f6fa176d3544265b7651111f8f6cc83");
+    if (outputDiv.id !== "altair-viz-899b830f6d6f4fc590bc9bd8a51164c4") {
+      outputDiv = document.getElementById("altair-viz-899b830f6d6f4fc590bc9bd8a51164c4");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15895,12 +15911,12 @@ memory usage: 27.3+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-b61249d24aa9422aa219619ab489709e"></div>
+<div id="altair-viz-847526961fdb48f08638c305c4a6e509"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b61249d24aa9422aa219619ab489709e") {
-      outputDiv = document.getElementById("altair-viz-b61249d24aa9422aa219619ab489709e");
+    if (outputDiv.id !== "altair-viz-847526961fdb48f08638c305c4a6e509") {
+      outputDiv = document.getElementById("altair-viz-847526961fdb48f08638c305c4a6e509");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -16002,12 +16018,12 @@ memory usage: 27.3+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-ddb946ad782d443e855d201d8857ee77"></div>
+<div id="altair-viz-6ef33f988b6d4e2a900f7575e7cb0ad8"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ddb946ad782d443e855d201d8857ee77") {
-      outputDiv = document.getElementById("altair-viz-ddb946ad782d443e855d201d8857ee77");
+    if (outputDiv.id !== "altair-viz-6ef33f988b6d4e2a900f7575e7cb0ad8") {
+      outputDiv = document.getElementById("altair-viz-6ef33f988b6d4e2a900f7575e7cb0ad8");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
